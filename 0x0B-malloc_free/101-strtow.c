@@ -62,11 +62,7 @@ char **strtow(char *str)
 		l = 0;
 		while (*(ts + l) != ' ' && *(ts + l) != 0)
 			l++;
-		s[i] = malloc((l
-	s[i] = NULL;
-	if (fr == 1)
-	{
-		for (k = 0; k <= i; k++) + 1) * sizeof(char));
+		s[i] = malloc((l + 1) * sizeof(char));
 		if (s[i] == 0)
 		{
 			fr = 1;
@@ -77,6 +73,10 @@ char **strtow(char *str)
 		s[i][j] = '\0';
 		ts = _trspace(ts + l);
 	}
+	s[i] = NULL;
+	if (fr == 1)
+	{
+		for (k = 0; k <= i; k++)
 			free(s[k]);
 		free(s);
 	}
