@@ -5,17 +5,6 @@
 void populateResult(char *dest, char *n1, int n1_len, char *n2, int n2_len);
 int getLengthOfNum(char *str);
 void print_result(char *src, int length);
-
-/**
- * main - entry point, multiplies two numbers
- *
- * @argc: integer, length of @argv
- *
- * @argv: one-dimensional array of strings, arguments of this program
- *
- * Return: 0, success
- */
-
 int main(int argc, char *argv[])
 {
 	int num1_length, num2_length;
