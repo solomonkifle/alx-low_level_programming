@@ -1,26 +1,49 @@
+#include <stdio.h>
+#include <stdarg.h>
 #include "variadic_functions.h"
-
+#include <stdbool.h>
 /**
- * print_numbers - print numbers, followed by a new line.
- * @separator: the string to be printed between numbers.
- * @n: the number of integers to be passed to the function.
+ * print_all - Function that prints anything
  *
- * Return: nothing
+ * @format: This is the format to print a value
+ *
  */
-void print_numbers(const char *separator, const unsigned int n, ...)
+void print_all(const char * const format, ...)
 {
-	va_list args;
-	unsigned int i;
+	va_list vl;
+	char *string;
+	int i;
 
-	va_start(args, n);
-
-	for (i = 0; i < n; i++)
+	i = 0;
+	va_start(vl, format);
+	while (format != NULL && format[i] != '\0')
 	{
-		if (!separator || (separator && !i))
-			printf("%d", va_arg(args, int));
-		else
-			printf("%s%d", separator, va_arg(args, int));
+		switch (format[i])
+		{
+			case 'i':
+				printf("%i", va_arg(vl, int));
+				break;
+			case 'f':
+				printf("%f", va_arg(vl, double));
+				break;
+			case 'c':
+				printf("%c", (char) va_arg(vl, int));
+				break;
+			case 's':
+				string = va_arg(vl, char *);
+				if (string == NULL)
+				{
+					printf("(nil)");
+					break;
+				}
+				printf("%s", string);
+				break;
+		}
+		if ((format[i] == 'c' || format[i] == 'i' || format[i] == 'f' ||
+		format[i] == 's') && format[(i + 1)] != '\0')
+			printf(", ");
+		i++;
 	}
-	va_end(args);
 	printf("\n");
+	va_end(vl);
 }
