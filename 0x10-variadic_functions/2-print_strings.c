@@ -1,6 +1,6 @@
 /*
  * File: 2-print_strings.c
- * Author: Yovo Koffi Vianney
+ * Author: SOLOMON KIFLE TADESSE
  */
 
 #include "variadic_functions.h"
