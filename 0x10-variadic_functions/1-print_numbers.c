@@ -1,49 +1,26 @@
-#include <stdio.h>
 #include <stdarg.h>
+#include <stdio.h>
 #include "variadic_functions.h"
-#include <stdbool.h>
 /**
- * print_all - Function that prints anything
+ * print_numbers - Function that prints numbers,
+ *                 followed by a new line.
  *
- * @format: This is the format to print a value
+ * @separator: This is input separator
+ * @n: This is the input number
  *
  */
-void print_all(const char * const format, ...)
+void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	va_list vl;
-	char *string;
-	int i;
-
-	i = 0;
-	va_start(vl, format);
-	while (format != NULL && format[i] != '\0')
+	va_list valist;
+	unsigned int count;
+	
+	va_start(valist, n);
+	for (count = 0; count < n; count++)
 	{
-		switch (format[i])
-		{
-			case 'i':
-				printf("%i", va_arg(vl, int));
-				break;
-			case 'f':
-				printf("%f", va_arg(vl, double));
-				break;
-			case 'c':
-				printf("%c", (char) va_arg(vl, int));
-				break;
-			case 's':
-				string = va_arg(vl, char *);
-				if (string == NULL)
-				{
-					printf("(nil)");
-					break;
-				}
-				printf("%s", string);
-				break;
-		}
-		if ((format[i] == 'c' || format[i] == 'i' || format[i] == 'f' ||
-		format[i] == 's') && format[(i + 1)] != '\0')
-			printf(", ");
-		i++;
+		printf("%d", va_arg(valist, const unsigned int));
+		if (separator != NULL && count != (n - 1))
+			printf("%s", separator);
 	}
 	printf("\n");
-	va_end(vl);
+	va_end(valist);
 }
