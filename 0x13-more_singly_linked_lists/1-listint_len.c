@@ -1,8 +1,3 @@
-/*
- * File: 1-listint_len.c
- * Auth: Yovo, Koffi Vianney
- */
-
 #include "lists.h"
 #include <stdio.h>
 
