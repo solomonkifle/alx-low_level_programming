@@ -1,8 +1,3 @@
-/*
- * File: 100-reverse_listint.c
- * Author: Yovo Koffi Vianney
- */
-
 #include "lists.h"
 
 /**
