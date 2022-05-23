@@ -1,8 +1,3 @@
-/*
- * File: 102-free_listint_safe.c
- * Author: Yovo Koffi Vianney
- */
-
 #include "lists.h"
 
 size_t looped_listint_count(listint_t *head);
