@@ -1,8 +1,3 @@
-/*
- * File: 4-free_listint.c
- * Author: Yovo, Koffi Vianney
- */
-
 #include "lists.h"
 
 /**
