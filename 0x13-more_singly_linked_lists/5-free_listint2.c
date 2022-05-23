@@ -1,8 +1,3 @@
-/*
- * File: 5-free_listint2.c
- * Author: Yovo, Koffi Vianney
- */
-
 #include "lists.h"
 
 /**
