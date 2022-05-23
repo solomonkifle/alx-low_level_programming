@@ -1,8 +1,3 @@
-/*
- * File: 7-get_nodeint.c
- * Author: Yovo Koffi Vianney
- */
-
 #include "lists.h"
 
 /**
