@@ -1,9 +1,3 @@
-/*
- * File: 3-add_nodeint_end.c
- * Author: Yovo Koffi Vianney
- *
- */
-
 #include "lists.h"
 
 /**
