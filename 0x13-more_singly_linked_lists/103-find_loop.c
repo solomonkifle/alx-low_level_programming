@@ -1,8 +1,3 @@
-/*
- * File: 103-find_loop.c
- * Author: Yovo Koffi Vianney
- */
-
 #include "lists.h"
 
 /**
