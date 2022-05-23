@@ -1,8 +1,3 @@
-/*
- * File: 2-add_nodeint.c
- * Author: Yovo Koffi Vianney
- */
-
 #include "lists.h"
 
 /**
