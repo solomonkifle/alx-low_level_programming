@@ -1,1 +1,1 @@
-single link
+# C - More singly linked lists
