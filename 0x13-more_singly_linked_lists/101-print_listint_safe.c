@@ -1,8 +1,3 @@
-/*
- * File: 101-print_listint_safe.c
- * Author: Yovo Koffi Vianney
- */
-
 #include "lists.h"
 #include <stdio.h>
 
